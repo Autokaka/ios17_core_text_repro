@@ -14,7 +14,7 @@ SKLabelNode *createLabelNode(void) {
     CGFloat scale = [UIScreen.mainScreen scale];
     NSLog(@"FUCK?%@", @(scale));
     int fontSize = 16 * scale;
-    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:@"《眼中《星》眼中星眼中星眼中星眼中星眼中星》" attributes:@{
+    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:@"《眼中星》" attributes:@{
         NSFontAttributeName: [UIFont boldSystemFontOfSize:fontSize],
         NSForegroundColorAttributeName: [UIColor whiteColor],
     }];
