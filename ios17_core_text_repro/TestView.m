@@ -46,16 +46,20 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    // Solution 1, create CGImage using CoreText and draw the result to screen ("《眼中" with red color)
+    NSString *text = @"《眼中星》";
+    
+    // Solution 1, create CGImage using CoreText and draw the result to screen.
+    // The the display result will be "《眼中" with red color.
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGImageRef cgImage = [TestView createCGImageUsingCoreText:@"《眼中星》"];
+    CGImageRef cgImage = [TestView createCGImageUsingCoreText:text];
     CGContextTranslateCTM(context, 0, rect.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
     CGContextTranslateCTM(context, 0, 300);
     CGContextDrawImage(context, CGRectMake(0, 0, CGImageGetWidth(cgImage), CGImageGetHeight(cgImage)), cgImage);
     
-    // Solution 2, create UIImage using UIKit and draw the result to screen ("《眼中星》" with green color)
-    UIImage *uiImage = [TestView createUIImageUsingUIKit:@"《眼中星》"];
+    // Solution 2, create UIImage using UIKit and draw the result to screen.
+    // The the display result will be "《眼中星》" with green color.
+    UIImage *uiImage = [TestView createUIImageUsingUIKit:text];
     CGFloat scale = UIScreen.mainScreen.scale;
     CGContextScaleCTM(context, 1 / scale, 1 / scale);
     CGContextTranslateCTM(context, 0, -300);
