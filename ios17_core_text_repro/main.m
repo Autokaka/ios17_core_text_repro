@@ -1,8 +1,8 @@
 //
 //  main.m
-//  sk_test_universal iOS
+//  ios17_core_text_repro
 //
-//  Created by 鲁澳 on 2023/10/19.
+//  Created by luao on 2023/10/26.
 //
 
 #import <UIKit/UIKit.h>
